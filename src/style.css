@@ -1,0 +1,217 @@
+@font-face {
+  font-family: 'MyFont';
+  src: url('./my-font.ttf') format('ttf');
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+
+*{
+  color:rgb(250, 250, 241);
+  font-family:"MyFont";
+
+}
+
+body{
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+main{
+margin-top: 50px;
+position:absolute;
+
+width:100%;
+}
+.currentW{
+  margin:50px;
+  width:70%;
+  
+  
+}
+header{
+  
+  position:fixed;
+  background-color: rgba(36, 30, 30);
+  height: 100px;
+  width: 100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  top:0px;
+  left: 0px;
+}
+footer{
+
+  position: absolute;
+  bottom: -100px;
+  width: 100%;
+  height: 100px;
+ background-color: rgba(36, 30, 30);
+ left: 0px;
+ display:flex;
+  align-items:center;
+  justify-content:space-around;
+}
+footer.p{
+  font-size:20px;
+}
+.headerBox{
+  margin-right: 20px;
+}
+.title{
+  margin-left: 20px;
+}
+
+.btn{
+  background-color: rgb(25, 128, 65);
+  padding: 10px 20px;
+  border: 1px solid rgb(12, 177, 86);
+  border-radius: 5px;
+  font-size: 18px;
+}
+input{
+  height: 30px;
+  margin-right: 10px;
+  color:rgb(12, 143, 62);
+  font-size:20px;
+  margin-left: 10px;
+  border-radius: 5px;
+  font-weight: 700;
+}
+label{
+  font-size: 22px;
+}
+
+
+.tempLabel, .windLabel{
+  position:relative;
+  margin: 10px;
+
+  width: 400px;
+  height: 300px;
+  border: 1px solid rgba(54, 43, 43, 0.3);
+  display:inline-table;
+  background-color: rgba(73, 163, 231, 0.3);
+  
+}
+
+.windLabel{
+  background-image: url('https://i.gifer.com/C1Ko.gif');
+  background-size: cover;
+  opacity: 0.9;
+}
+
+
+.city{
+  text-align: center;
+  color:rgb(6, 245, 18);
+}
+
+.degrees{
+  color:rgb(6, 245, 18);
+  text-align: center;
+
+}
+.degreesMaxMin{
+  font-size: 15px;
+  text-align: center;
+}
+.pressure{
+  position: absolute;
+  color:orange;
+  bottom:5px;
+  left:50%;
+  transform: translate(-50%, 0);
+  
+}
+.des{
+  position: absolute;
+  bottom:60px;
+  left:50%;
+  transform: translate(-50%, 0);
+}
+
+.humadityTitle{
+  text-align: center;
+}
+
+.canvasHum{
+  position: absolute;
+  left:50%;
+  transform: translate(-50%, 0);
+  bottom:0px;
+}
+.feels_like{
+  position: absolute;
+  color:orange;
+  bottom:5px;
+  left:50%;
+  transform: translate(-50%, 0);
+}
+
+.SSTitle{
+  text-align: center;
+}
+.sun{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  margin: 0;
+  box-shadow:0px 0px 10px 10px rgba(54, 43, 43, 0.5);
+  border-radius:100px;
+}
+
+.SS{
+  border-top: 1px solid rgb(31, 113, 207);
+  position: absolute;
+  bottom: 0px;
+  width: 400px;
+  height: 35px;
+
+}
+.sunRise{
+  position: absolute;
+  bottom: -15px;
+  left: 10px;
+  font-size: 20px;
+}
+
+.sunSet{
+  position: absolute;
+  bottom: -15px;
+  right: 10px;
+  font-size: 20px;
+}
+
+.current{
+  text-align: center;
+  font-size: 20px;
+}
+.canvasS{
+  bottom: 35px;
+  width: 400px;
+  height: 180px;
+  position:absolute;
+  box-sizing: border-box;
+
+}
+
+.windDirection{
+  position: absolute;
+  left:10px;
+  color:rgb(6, 245, 18);
+  text-align: left;
+  bottom:50px;
+}
+.wind{
+  position: absolute;
+  color:rgb(6, 245, 18);
+  left:10px;
+  bottom:20px;
+}
+
+.windTitle{
+  text-align: center;
+}
