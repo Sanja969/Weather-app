@@ -6,16 +6,18 @@
   
    
 }
+
+
 .hour{
     height: 200px;
-    top:610px;
     display:flex;
     align-items: justify;
     justify-content:space-between;
     overflow: auto;
     width:60%;
-    position:absolute;
+    position:relative;
     left:60px;
+    margin-bottom: 50px;
 }
 .day{
     height: 700px;
@@ -28,6 +30,7 @@
     position:absolute;
    right: 50px;
    top:60px;
+   bottom: 20px;;
 }
 
 
