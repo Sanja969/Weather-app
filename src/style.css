@@ -45,7 +45,7 @@ header{
 footer{
 
   position: absolute;
-  bottom: -100px;
+  bottom: 0px;
   width: 100%;
   height: 100px;
  background-color: rgba(36, 30, 30);
@@ -84,13 +84,15 @@ label{
   font-size: 22px;
 }
 
-
+.tempLabel{
+height: 300px;
+}
 .tempLabel, .windLabel{
   position:relative;
   margin: 10px;
 
   width: 400px;
-  height: 300px;
+  
   border: 1px solid rgba(54, 43, 43, 0.3);
   display:inline-table;
   background-color: rgba(73, 163, 231, 0.3);
@@ -101,6 +103,7 @@ label{
   background-image: url('https://i.gifer.com/C1Ko.gif');
   background-size: cover;
   opacity: 0.9;
+  height: 200px;
 }
 
 

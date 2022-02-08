@@ -7,19 +7,18 @@
    
 }
 .hour{
-    height: 220px;
-    top:700px;
+    height: 200px;
+    top:610px;
     display:flex;
     align-items: justify;
     justify-content:space-between;
     overflow: auto;
     width:60%;
     position:absolute;
-    bottom:0px;
     left:60px;
 }
 .day{
-    height: 850px;
+    height: 700px;
     width:400px;
     display:flex;
     flex-direction: column;
@@ -36,7 +35,7 @@
 .hourBox{
     min-height: 180px;
     min-width: 100px;
-    margin-top: 20px;
+    margin-top: 0px;
     position: relative;
     margin-left:20px;
 }
