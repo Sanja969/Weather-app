@@ -1,8 +1,27 @@
 
-import sunIcon from "./sun1.png";
+import sunIcon from "./assets/sun1.png";
+
+import dayClear from "./assets/day-clear.jpg";
+import dayClouds from "./assets/day-clouds.jpg";
+import dayDrizle from "./assets/day-drizzle.jpg";
+import dayMist from "./assets/day-mist.jpg";
+import dayRain from "./assets/day-rain.jpg";
+import daySnow from "./assets/day-snow.gif";
+import dayStorm from "./assets/day-storm.jpg";
+import nightClear from "./assets/night-clear.jpg";
+import nightClouds from "./assets/night-clouds.jpg";
+import nightDrizle from "./assets/night-drizzle.jpg";
+import nightMist from "./assets/night-mist.jpg";
+import nightRain from "./assets/night-rain.gif";
+import nightSnow from "./assets/night-snow.jpg";
+import nightStorm from "./assets/night-storm.jpg";
 
 const sun1 = new Image();
 sun1.src=sunIcon;
+
+
+
+
 const canvasHum = document.createElement("canvas");
 const canvasSun = document.createElement("canvas");
 
@@ -133,38 +152,34 @@ function switchBackground(x){
 
   switch (x) {
     case "Clear":
-      document.body.style.backgroundImage =
-        'url("https://cdn.pixabay.com/photo/2018/08/06/22/55/sun-3588618_960_720.jpg")';
+      document.body.style.backgroundImage = `url(${dayClear})`;
       break;
 
     case "Clouds":
-      document.body.style.backgroundImage =
-        'url("https://cdn.pixabay.com/photo/2019/05/19/23/47/clouds-4215608_960_720.jpg")';
+      document.body.style.backgroundImage = `url(${dayClouds})`;
       break;
 
     case "Rain":
-      document.body.style.backgroundImage = 'url("https://cdn.pixabay.com/photo/2016/11/08/05/26/woman-1807533_960_720.jpg")';
+      document.body.style.backgroundImage = `url(${dayRain})`;
       break;
 
     case "Snow":
-      document.body.style.backgroundImage = 'url("https://i.pinimg.com/originals/95/e8/2d/95e82d311a9c58d3f5e758c1d472f994.gif")';
+      document.body.style.backgroundImage = `url(${daySnow})`;
       break;
     case "Thunderstorm":
-      document.body.style.backgroundImage = 'url("https://cdn.pixabay.com/photo/2016/01/22/23/06/flash-1156822_960_720.jpg")';
+      document.body.style.backgroundImage = `url(${dayStorm})`;
       break;
 
     case "Mist":
-      document.body.style.backgroundImage = 'url("https://cdn.pixabay.com/photo/2016/04/20/19/47/wolves-1341881_960_720.jpg")';
+      document.body.style.backgroundImage = `url(${dayMist})`;
       break;
 
     case "Drizzle":
-      document.body.style.backgroundImage =
-       'url("https://cdn.pixabay.com/photo/2019/10/30/21/53/gods-gift-4590648_960_720.jpg")';
+      document.body.style.backgroundImage = `url(${dayDrizle})`;
       break;
 
     default:
-      document.body.style.backgroundImage =
-        'url("https://cdn.pixabay.com/photo/2016/04/20/19/47/wolves-1341881_960_720.jpg")';
+      document.body.style.backgroundImage = `url(${dayMist})`;
       break;
 
   }
@@ -174,40 +189,34 @@ function switchBackground(x){
 function switchBackgroundNight(x) {
   switch (x) {
     case "Clear":
-      document.body.style.backgroundImage =
-        'url("https://a.rgbimg.com/users/w/we/weirdvis/600/meSbNaU.jpg");';
+      document.body.style.backgroundImage = `url(${nightClear})`;
       break;
 
     case "Clouds":
-      document.body.style.backgroundImage =
-        'url("https://www.pixelstalk.net/wp-content/uploads/2016/03/Night-Cloud-Wallpaper-free-download.jpg")';
+      document.body.style.backgroundImage = `url(${nightClouds})`;
       break;
 
     case "Rain":
-      document.body.style.backgroundImage = 'url("https://cdn.pixabay.com/photo/2017/08/06/06/18/rain-2589417_960_720.jpg")';
+      document.body.style.backgroundImage = `url(${nightRain})`;
       break;
 
     case "Snow":
-      document.body.style.backgroundImage =
-        'url("https://cdn5.vectorstock.com/i/1000x1000/04/64/winter-snowfall-and-christmas-snowy-hill-vector-28070464.jpg")';
+      document.body.style.backgroundImage = `url(${nightSnow})`;
       break;
     case "Thunderstorm":
-      document.body.style.backgroundImage =
-        'url("https://cdn.pixabay.com/photo/2017/08/01/22/38/flash-2568381_960_720.jpg")';
+      document.body.style.backgroundImage = `url(${nightStorm})`;
       break;
 
     case "Mist":
-      document.body.style.backgroundImage =
-        'url("https://cdn.pixabay.com/photo/2018/01/29/19/00/park-3116883_960_720.jpg")';
+      document.body.style.backgroundImage = `url(${nightMist})`;
       break;
 
     case "Drizzle":
-      document.body.style.backgroundImage = 'url("https://i.pinimg.com/originals/52/46/2a/52462a9f57dad91c7d80384bf737346c.gif")';
+      document.body.style.backgroundImage = `url(${nightDrizle})`;
       break;
 
     default:
-      document.body.style.backgroundImage =
-        'url("https://cdn.pixabay.com/photo/2018/01/29/19/00/park-3116883_960_720.jpg")';
+      document.body.style.backgroundImage = `url(${nightMist})`;
       break;
   }
 }
@@ -224,7 +233,5 @@ export {
  
  
 };
-
-
 
 

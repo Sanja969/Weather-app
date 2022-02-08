@@ -33,12 +33,14 @@ const pressure = document.createElement("h3");
 const des = new Image();
 
 async function getNextWeather(lat, lon) {
-//   try {
+  try {
     const response = await fetch(
       `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&appid=6062e530dfad8ba916ef0e1058b64243`,
       { mode: "cors" }
     );
     const weatherData = await response.json();
+    nextDaysLabel.innerHTML="";
+    nextHoursLabel.innerHTML="";
     console.log(weatherData);
     let utc = weatherData.timezone_offset;
     let currentTime = new Date();
@@ -105,9 +107,9 @@ async function getNextWeather(lat, lon) {
       degrees.textContent = weatherData.hourly[i].temp.toFixed() + "°";
       degrees.classList.add("hourDegrees");
     }
-    // }
-//   } catch (err) {
-//     console.log("Wrong search");
-//   }
+    
+  } catch (err) {
+    console.log("Wrong search");
+  }
 }
 
