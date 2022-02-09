@@ -84,7 +84,7 @@ function drawSun(x) {
   ctx.shadowBlur = 20;
   ctx.shadowColor = "orange";
 
-  ctx.drawImage(sun1, x*1.45-20+20, b-20, 40, 40);
+  ctx.drawImage(sun1, x*1.45-20+10, b-20, 40, 40);
   ctx.stroke();
 
   let scale = 20;
@@ -100,7 +100,7 @@ function drawSun(x) {
   while (x1 < 200) {
     s= (x1 * Math.PI) / 180
     y1 = 150- Math.sin(s)*100;
-    ctx.lineTo(x1*1.45+20, y1);
+    ctx.lineTo(x1*1.45+10, y1);
     x1 = x1 + 1;
   }
   ctx.stroke();

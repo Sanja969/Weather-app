@@ -217,7 +217,7 @@ footer{
 .canvasS{
   bottom: 35px;
   max-width: 400px;
-  min-width: 350px;
+  min-width: 340px;
   height: 180px;
   position:absolute;
   box-sizing: border-box;
