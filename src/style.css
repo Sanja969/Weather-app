@@ -79,15 +79,15 @@ footer{
   margin-left: 20px;
 }
 
-.btn{
+/* .btn{
   color:rgb(12, 177, 86);
   padding: 5px 10px;
   border: 3px solid rgb(12, 177, 86);
   border-radius: 5px;
   font-size: 120%;
 
-  font-weight: bold;
-}
+  font-weight: bold; */
+/* } */
 .btn:hover{
   cursor: pointer;
   background-color: rgb(126, 247, 172);
@@ -241,5 +241,3 @@ footer{
 .windTitle{
   text-align: center;
 }
-
-

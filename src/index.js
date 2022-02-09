@@ -24,8 +24,9 @@ logo.setAttribute("type", "image/png");
 
 const header = document.createElement("header");
 const main = document.createElement("main");
-document.body.appendChild(main);
 document.body.appendChild(header);
+document.body.appendChild(main);
+
 
 const content = document.createElement("div");
 main.appendChild(content);
@@ -43,14 +44,14 @@ header.appendChild(headerBox);
 const input = document.createElement("input");
 headerBox.appendChild(input);
 input.setAttribute("id", "csearch");
-input.setAttribute("type", "search");
+input.setAttribute("type", "text");
 input.setAttribute("onfocus", "this.value=''");
 input.value = "Search city";
 
-const btn = document.createElement("button");
-headerBox.appendChild(btn);
-btn.classList.add("btn");
-btn.textContent = "Get weather";
+// const btn = document.createElement("button");
+// headerBox.appendChild(btn);
+// btn.classList.add("btn");
+// btn.textContent = "Get weather";
 
 const currentW = document.createElement("div");
 content.appendChild(currentW);
@@ -139,7 +140,7 @@ windDirection.classList.add("windDirection");
 
 getWeather();
 
-btn.addEventListener("click",function(){
+input.addEventListener("keyup",function(){
 getWeather();
 })
 
