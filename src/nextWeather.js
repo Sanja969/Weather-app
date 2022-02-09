@@ -42,9 +42,11 @@ async function getNextWeather(lat, lon) {
     nextDaysLabel.innerHTML="";
     nextHoursLabel.innerHTML="";
     console.log(weatherData);
-    let utc = weatherData.timezone_offset;
+    let utc = weatherData.timezone_offset/3600;
+    console.log("heeeeeeeeeeeeeeeeeeey"+utc);
     let currentTime = new Date();
     let timeOffset = utc + currentTime.getTimezoneOffset() / 60;
+      console.log("heeeeeeeeeeeeeeeeeeey" + timeOffset);
     for (let i = 0; i < 7; i++) {
       const element = document.createElement("div");
       element.classList.add("dayBox");
@@ -79,33 +81,37 @@ async function getNextWeather(lat, lon) {
         "°";
       degreesMM.classList.add("dayDegreesMM");
     }
-    for (let i = 0; i < 24; i++) {
-      const element = document.createElement("div");
-      element.classList.add("hourBox");
-      element.classList.add(i);
-      nextHoursLabel.appendChild(element);
-      const date = document.createElement("h3");
-      date.classList.add("hourDate");
-      element.appendChild(date);
+    for (let i = 0; i < 48; i++) {
+      if (new Date().getHours()<new Date(weatherData.hourly[i].dt * 1000).getHours()) {
+        const element = document.createElement("div");
+        element.classList.add("hourBox");
+        element.classList.add(i);
+        nextHoursLabel.appendChild(element);
+        const date = document.createElement("h3");
+        date.classList.add("hourDate");
+        element.appendChild(date);
 
-      date.textContent =
-        formatData(new Date(weatherData.hourly[i].dt * 1000), timeOffset)
-          .hours +
-        ":" +
-        formatData(new Date(weatherData.hourly[i].dt * 1000), timeOffset).minutes;
+        date.textContent =
+          formatData(new Date(weatherData.hourly[i].dt * 1000), timeOffset)
+            .hours +
+          ":" +
+          formatData(new Date(weatherData.hourly[i].dt * 1000), timeOffset)
+            .minutes;
 
-      const des = new Image();
-      des.src = des.src =
-        "http://openweathermap.org/img/wn/" +
-        weatherData.hourly[i].weather[0].icon +
-        "@2x.png";
-      element.appendChild(des);
-      des.classList.add("hourDes");
+        const des = new Image();
+        des.src = des.src =
+          "http://openweathermap.org/img/wn/" +
+          weatherData.hourly[i].weather[0].icon +
+          "@2x.png";
+        element.appendChild(des);
+        des.classList.add("hourDes");
 
-      const degrees = document.createElement("h3");
-      element.appendChild(degrees);
-      degrees.textContent = weatherData.hourly[i].temp.toFixed() + "°";
-      degrees.classList.add("hourDegrees");
+        const degrees = document.createElement("h3");
+        element.appendChild(degrees);
+        degrees.textContent = weatherData.hourly[i].temp.toFixed() + "°";
+        degrees.classList.add("hourDegrees");
+      }
+      
     }
     
   } catch (err) {
