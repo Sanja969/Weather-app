@@ -44,6 +44,7 @@ const input = document.createElement("input");
 headerBox.appendChild(input);
 input.setAttribute("id", "csearch");
 input.setAttribute("type", "search");
+input.setAttribute("onfocus", "this.value=''");
 input.value = "Search city";
 
 const btn = document.createElement("button");
@@ -163,10 +164,7 @@ async function getWeather() {
     );
     const weatherData = await response.json();
     console.log(weatherData);
-    logo.setAttribute(
-      "href",
-      "http://openweathermap.org/img/wn/04n" + "@2x.png"
-    );
+    logo.setAttribute("href", "http://openweathermap.org/img/wn/04n@2x.png");
     let utc = weatherData.timezone / 3600;
     let lat = weatherData.coord.lat;
     let lon = weatherData.coord.lon;
