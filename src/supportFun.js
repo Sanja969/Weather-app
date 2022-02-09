@@ -120,7 +120,7 @@ function formatData(x,t){
     zoneHours=24+zoneHours;
   }
 
-  if (x < 10) {
+  if (zoneHours < 10) {
     hours = "0" + zoneHours;
   } else {
     hours = zoneHours;

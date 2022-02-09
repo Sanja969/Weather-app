@@ -23,7 +23,7 @@ min-width:300px;
 
 
 .content{
-  margin-top: 150px;
+  margin-top: 100px;
   position:relative;
   display:flex;
   align-items:justify;
@@ -43,7 +43,7 @@ min-width:300px;
 }
 header{
   
-  position:fixed;
+  position:absolute;
   background-color: rgba(36, 30, 30,0.9);
   min-height: 100px;
   width: 100%;
@@ -118,9 +118,16 @@ footer{
   background-image: url('./assets/wind.gif');
   background-size: cover;
   opacity: 0.9;
-  
+  animation-name: animWindLabel;
+  animation-duration:10s;
+  animation-iteration-count: infinite;
 }
-
+@keyframes animWindLabel {
+  0%   {left:0px; top:0px;}
+  50%  {left:50%; top:0px;}
+ 
+  100% {left:0px; top:0px;}
+}
 
 .city{
   text-align: center;
