@@ -11,7 +11,7 @@ nextDaysLabel.classList.add("day");
 nextHoursLabel.classList.add("nextElementsLabel");
 nextHoursLabel.classList.add("hour");
 const month = [
-  "",
+  
   "January",
   "February",
   "March",
