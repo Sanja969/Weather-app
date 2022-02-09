@@ -16,21 +16,28 @@
 body{
 background-size: cover;
 background-repeat: no-repeat;
+min-width:300px;
 
 }
 
-main{
-margin-top: 50px;
-position:relative;
-display:flex;
-flex-direction:column;
-align-items:left;
-justify-content:space-around;
-width:100%;
+
+
+.content{
+  margin-top: 150px;
+  position:relative;
+  display:flex;
+  align-items:justify;
+  justify-content:space-between;
+  width:100%;
+  flex-wrap:wrap;
+  min-height: 820px;
+
 }
+
 .currentW{
-  margin:50px;
-  width:70%;
+
+  min-width:60%;
+  flex:4;
   
   
 }
@@ -38,61 +45,69 @@ header{
   
   position:fixed;
   background-color: rgba(36, 30, 30,0.9);
-  height: 100px;
+  min-height: 100px;
   width: 100%;
   display:flex;
   align-items:center;
-  justify-content:space-between;
+  justify-content:space-around;
   top:0px;
   left: 0px;
+  
 }
 footer{
-position:relative;
+  position:relative;
   bottom:0px;
   width: 100%;
+  min-width: 365px;
   height: 100px;
   background-color: rgba(36, 30, 30,0.9);
   left: 0px;
   display:flex;
   align-items:center;
   justify-content:space-around;
+  margin-left:0;
 }
 
 .headerBox{
   margin-right: 20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex:1 1 0;
 }
 .title{
   margin-left: 20px;
 }
 
 .btn{
-  background-color: rgb(25, 128, 65);
-  padding: 10px 20px;
-  border: 1px solid rgb(12, 177, 86);
+  color:rgb(12, 177, 86);
+  padding: 5px 10px;
+  border: 3px solid rgb(12, 177, 86);
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 120%;
+
+  font-weight: bold;
 }
-input{
-  height: 30px;
+.btn:hover{
+  cursor: pointer;
+  background-color: rgb(126, 247, 172);
+}
+#csearch{
+  height: 40px;
   margin-right: 10px;
   color:rgb(12, 143, 62);
-  font-size:20px;
   margin-left: 10px;
   border-radius: 5px;
-  font-weight: 700;
-}
-label{
-  font-size: 22px;
+  min-width: 20%;
+  font-size: 120%;
 }
 
 
 .tempLabel, .windLabel{
   height: 300px;
   position:relative;
-  margin: 10px;
-
-  width: 400px;
-  
+  margin: 10px 0px 0px 10px;
+  min-width: 350px;
   border: 1px solid rgba(54, 43, 43, 0.3);
   display:inline-table;
   background-color: rgba(73, 163, 231, 0.3);
@@ -170,7 +185,7 @@ label{
   border-top: 1px solid rgb(31, 113, 207);
   position: absolute;
   bottom: 0px;
-  width: 400px;
+  width: 100%;
   height: 35px;
 
 }
@@ -194,7 +209,8 @@ label{
 }
 .canvasS{
   bottom: 35px;
-  width: 400px;
+  max-width: 400px;
+  min-width: 350px;
   height: 180px;
   position:absolute;
   box-sizing: border-box;
@@ -218,3 +234,5 @@ label{
 .windTitle{
   text-align: center;
 }
+
+
