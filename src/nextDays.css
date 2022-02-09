@@ -12,8 +12,8 @@
     margin: 30px 5px 10px 10px;
     height: 200px;
     display:flex;
-    align-items: justify;
-    justify-content:space-between;
+    align-items: left;
+    justify-content:left;
     overflow: auto;
     min-width: 350px;
     max-width: 800px;

@@ -156,7 +156,7 @@ async function getWeather() {
       desLabel.appendChild(canvasHum);
       sunLabel.appendChild(canvasSun);
       
-  // try {
+  try {
  
     const response = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=6062e530dfad8ba916ef0e1058b64243`,
@@ -233,10 +233,10 @@ async function getWeather() {
     getNextWeather(lat,lon);
     content.appendChild(nextDaysLabel);
     currentW.appendChild(nextHoursLabel);
-  // }
-  // catch (err) {
-  //   console.log("Wrong search");
-  // }
+  }
+  catch (err) {
+    console.log("Wrong search");
+  }
 }
 
 
