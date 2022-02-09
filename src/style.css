@@ -38,7 +38,7 @@ min-width:300px;
 
   min-width:60%;
   flex:4;
-  
+  max-width: 1000px;
   
 }
 header{
@@ -114,6 +114,7 @@ footer{
   
 }
 
+
 .windLabel{
   background-image: url('./assets/wind.gif');
   background-size: cover;
@@ -125,7 +126,6 @@ footer{
 @keyframes animWindLabel {
   0%   {left:0px; top:0px;}
   50%  {left:50%; top:0px;}
- 
   100% {left:0px; top:0px;}
 }
 
