@@ -51,7 +51,7 @@ header{
   align-items:center;
   justify-content:space-around;
   top:0px;
-
+ 
   
 }
 footer{
@@ -73,8 +73,7 @@ footer{
   display:flex;
   align-items:center;
   justify-content:center;
-  
- 
+  flex:1 1 0;
 }
 .title{
   margin-left: 20px;
@@ -99,9 +98,8 @@ footer{
   color:rgb(12, 143, 62);
   margin-left: 10px;
   border-radius: 5px;
-  min-width: 15%;
+  min-width: 20%;
   font-size: 120%;
-
 }
 
 
